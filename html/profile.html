@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Profile</title>
+<link rel="stylesheet" href="../css/profile.css" />
+<script type="text/javascript" src="../javascript/profile.js"></script>
+</head>
+<body>
+	<!--main header -->
+	<header>
+		<nav>
+			<ul>
+				<li class="buttons"><a href="a">Travel</a></li>
+				<li class="buttons"><a href="a">News</a></li>
+				<li class="buttons"><a href="a">Sports</a></li>
+				<li class="buttons"><a href="a">politics</a></li>
+				<li id="title">MyDiscussionForum</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="main">
+
+		<!--profile -->
+		<article id="leftside">
+			<section id="profile">
+				<h1>Profile</h1>
+				<div class="aboutme">
+					<figure>
+						<img src="../images/profile.jpg" alt="image" id="profilepic" />
+					</figure>
+					<hr>
+					<p>
+						<strong>Name:</strong> Dustin Olychuck
+					</p>
+					<p>
+						<strong>UserName:</strong> Dolychuck
+					</p>
+					<p>
+						<strong>Email:</strong> DOlychuck@hotmail.com
+					</p>
+					<p>
+						<strong>About Me:</strong> I am currently a student at Ubco and I
+						like to travel. My hobbies are watching sports, snowboarding,
+						golfing and watching movies.
+					</p>
+					<p>
+						<strong>Recent posts:</strong>
+					</p>
+					<p>
+						<a href="article.html ">Tokyo Sky tree</a>
+					</p>
+					<p>
+						<a href="article.html ">example</a>
+					</p>
+					<p>
+						<a href="article.html ">example</a>
+					</p>
+					<p>
+						<a href="article.html ">example</a>
+					</p>
+					<p>
+						<a href="article.html ">example</a>
+					</p>
+				</div>
+			</section>
+		</article>
+
+		<!--new posts -->
+		<article id="rightside">
+			<section class="posts">
+				<form method="get" onsubmit="return comment();">
+					<fieldset>
+						<legend>New Post</legend>
+						<table>
+							<tr>
+								<td colspan="2">
+									<p>
+										<label>Theme</label><br /> <input type="text" id="theme" size="58" placeholder="theme" />
+									</p>
+									<p class="invalidtheme"></p>
+									<p>
+										<label>Post</label><br />
+										<textarea id="userpost" rows="15" cols="53" placeholder="post"></textarea>
+									</p>
+									<p class="invaliduserpost"></p>
+									<p>
+										<label>Picture</label> <input type="file" accept="image/*"
+											title="&nbsp;" />
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div>
+										<input type="submit"> <input type="reset"
+											value="Clear Form">
+									</div>
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+				</form>
+			</section>
+		</article>
+	</div>
+	<!--bottom footer -->
+	<footer>
+		<p>
+			<a href="#">Home</a> | <a href="#">About us</a> | <a href="#">Contact</a>
+		</p>
+		<p>
+			<em>Copyright &copy; MyDiscussionForum</em>
+		</p>
+	</footer>
+</body>
+</html>

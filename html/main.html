@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>MyDiscussionForum</title>
+<link rel="stylesheet" href="../css/mainStyle.css" />
+<script type="text/javascript" src="../javascript/userpass.js"></script>
+</head>
+<body>
+	<!--main header -->
+	<header>
+		<nav>
+			<ul>
+				<li class="buttons"><a href="a">Travel</a></li>
+				<li class="buttons"><a href="a">News</a></li>
+				<li class="buttons"><a href="a">Sports</a></li>
+				<li class="buttons"><a href="a">politics</a></li>
+				<li id="profile"><a href="profile.html">Profile</a></li>
+				<li id="title">MyDiscussionForum</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="main">
+		<article id="rightside">
+			<!--user login -->
+			<section id="userLogin">
+				<form>
+					<input type="text" id="search" placeholder="search" size="38" />
+					
+					</form>
+				<form type="POST" method="" onsubmit="return userpass();">
+					<fieldset>
+						<legend> Login </legend>
+						<p>
+							<label>Username:</label> <input type="text" name="username" id="user"
+								placeholder="username" />
+						</p>
+						<p class="invaliduser"></p>
+						<p>
+							<label>Password: </label> <input type="password" name="password" id="pass"
+								placeholder="password" />
+						</p>
+						<p class="invalidpass"></p>
+						<p>
+							No account?<a href="signup.html">&nbsp Create one!</a> <input
+								type="submit" value="Login" class="loginbutton" />
+						</p>
+
+					</fieldset>
+				</form>
+			</section>
+
+			<!--recommended posts -->
+			<section id="recommended">
+				<h1>Recommended</h1>
+				<div class="recposts">
+					<a href="">Post link</a>
+					<h2>This is where all the content goes about the article</h2>
+					<h3>author</h3>
+				</div>
+
+				<div class="recposts">
+					<a href="">Post link</a>
+					<h2>This is where all the content goes about the article</h2>
+					<h3>author</h3>
+				</div>
+
+				<div class="recposts">
+					<a href="">Post link</a>
+					<h2>This is where all the content goes about the article</h2>
+					<h3>author</h3>
+				</div>
+
+			</section>
+
+
+		</article>
+
+		<!--main posts -->
+		<article id="leftside">
+			<section class="posts">
+				<figure>
+					<img src="../images/skytreesmall.jpg" alt="image" />
+					<figcaption>Sky Tree</figcaption>
+				</figure>
+				<a href="Article.html">Tokyo Sky Tree is Tall! I wonder what it
+					looks like up there?</a>
+				<p>Author: wikipedia</p>
+				<P>Tokyo Skytree (東京スカイツリー Tōkyō Sukaitsurī?) is a broadcasting,
+					restaurant,[3] and observation tower in Sumida, Tokyo, Japan. It
+					became the tallest structure in Japan in 2010[4] and reached its
+					full...</p>
+			</section>
+			<section class="posts">
+				<figure>
+					<img src="../images/default.png" alt="image" />
+					<figcaption>no image</figcaption>
+				</figure>
+				<a href="Article.html">Post Link -Title of the article</a>
+				<p>author</p>
+				<p>This is where the main headline of the article goes</p>
+			</section>
+			<section class="posts">
+				<figure>
+					<img src="../images/default.png" alt="image" />
+					<figcaption>no image</figcaption>
+				</figure>
+				<a href="Article.html">Post Link -Title of the article</a>
+				<p>author</p>
+				<p>This is where the main headline of the article goes</p>
+			</section>
+			<section class="posts">
+				<figure>
+					<img src="../images/default.png" alt="image" />
+					<figcaption>no image</figcaption>
+				</figure>
+				<a href="Article.html">Post Link -Title of the article</a>
+				<p>author</p>
+				<p>This is where the main headline of the article goes</p>
+			</section>
+
+		</article>
+	</div>
+	<!--bottom footer -->
+	<footer>
+		<p>
+			<a href="#">Home</a> | <a href="#">About us</a> | <a href="#">Contact</a>
+		</p>
+		<p>
+			<em>Copyright &copy; MyDiscussionForum</em>
+		</p>
+	</footer>
+</body>
+</html>

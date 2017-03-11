@@ -1,0 +1,169 @@
+body, h1, h2, h3, nav, footer {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+footer{
+    color: white;
+    background-color: #6587b9;
+	margin:  1em 13em 1em 13em;
+  }
+  
+  
+  header  {
+	top:0;
+	color: white;
+    background-color: #6587b9;
+	z-index: 1;
+	position:fixed;
+	width: 100%;
+ }
+  
+ #profile {
+	float:right;
+	margin-right:2em;
+	padding: .5em .5em .5em .5em;
+ }
+
+ #profile:hover {
+	box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1); 
+ }
+ 
+ #title {
+	margin-right: 32rem;
+	margin-left: 10rem;
+	font-size:150%;
+	float:right;
+ }
+ 
+  nav li{
+     list-style: none;
+     display: inline;
+ }
+  
+ header h1 {
+	text-align:center;
+ }
+ .buttons {
+		padding: .5em .5em .5em .5em;
+ }
+ 
+.buttons:hover {
+	 box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+ a:link  {
+	text-decoration:none; 
+	color: white;
+}
+
+ body {
+	background-color:#efefef;
+}
+
+article {
+     background-color: white;
+ }
+ 
+div#main {
+	overflow:hidden;
+    height: 100%;
+	background-color: white;
+	margin:  5em 13em 1em 13em;
+	min-height: 30em
+}
+
+#searchbar {
+	margin:  1em .25em .25em .25em;
+	padding: .25em .25em .25em .6em;
+}
+
+#search {
+	margin:  1em .25em .25em .25em;
+	padding: .25em .25em .25em .25em;
+}
+
+article#leftside {
+   margin: 0em 5em 2em 0em;
+   height: 100%;
+   overflow: hidden;
+}
+
+#comments {
+	margin: 1em 1em 0em 1em;
+}
+
+.comment {
+	border-top: 1pt solid #efefef;
+	border-bottom: 1pt solid #efefef;
+	
+}
+
+span {
+    font-weight:bold;
+	color:#6587b9;
+	font-style: italic;
+}
+	
+#search {
+	margin:  1em .25em .25em .25em;
+	padding: .25em .25em .25em .25em;
+}
+
+article#rightside {
+ float:right;
+  width: 20em;
+  height: 100%;
+}
+
+article#leftside a:hover {
+	text-decoration:underline;   
+  }
+  
+article#rightside a:hover {
+	text-decoration:underline;   
+}
+  
+.post {
+	overflow: auto;
+	word-wrap: break-word;
+    margin: 1em 1em 1em 1em;
+    border-bottom: 1pt solid #6587b9;
+}
+ 
+#articleHead {
+	/*text-align: center;
+	background-color: #efefef;*/
+	margin: 1em 1em 1em 2em;*/
+}
+
+#author {
+	border-bottom: 1pt dashed #efefef; 
+}
+
+img {
+	padding: 1em 1em 1em 1em;
+	background-color: #efefef;
+	width: 100%;
+	height: 400px;
+}
+  
+ .recposts {
+	word-wrap: break-word;
+    margin: 1em 1em 1em 1em;
+    border-bottom: 1pt dotted black;
+ }
+ 
+ #userLogin {
+	margin-left:1em;
+	margin-right:1em; 
+ }
+#recommended {
+	background-color:#efefef;
+	min-height:21em;
+	margin-left:1em;
+	margin-right:1em;
+}	
+#recommended h1 {
+	background: #6587b9;
+	color: white;
+	text-align: center;
+ }

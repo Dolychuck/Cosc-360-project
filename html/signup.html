@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Sign up</title>
+<link rel="stylesheet" href="../css/signup.css" />
+<link rel="stylesheet" href="../css/error.css" />
+<script type="text/javascript" src="../javascript/signup.js"></script>
+</head>
+<body>
+	<!--main header -->
+	<header>
+		<nav>
+			<ul>
+				<li class="buttons"><a href="a">Travel</a></li>
+				<li class="buttons"><a href="a">News</a></li>
+				<li class="buttons"><a href="a">Sports</a></li>
+				<li class="buttons"><a href="a">politics</a></li>
+
+				<li id="title">MyDiscussionForum</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="main">
+		<form method="get" onsubmit="return myFunction();">
+			<fieldset>
+				<legend>Sign Up</legend>
+				<table>
+					<tr>
+						<td colspan="2">
+							<p>
+								<label>First Name*</label><br /> <input type="text"
+									id="firstname" name="title" size="80" />
+							</p>
+							<p class="invalidfirstname"></p>
+							<p>
+								<label>Last Name*</label><br /> <input type="text"
+									id="lastname" size="80" />
+							</p>
+							<p class="invalidlastname"></p>
+							<p>
+								<label>username*</label><br /> <input type="text" id="username"
+									size="80" />
+							</p>
+							<p class="invalidusername"></p> <label>email*</label><br /> <input
+							type="text" id="email" size="80" />
+							<p class="invalidemail"></p>
+							<p>
+								<label>password*</label><br /> <input type="password"
+									id="password" size="80" />
+							</p>
+							<p class="invalidpass"></p>
+							<p>
+								<label>Confirm password*</label><br /> <input type="password"
+									id="confpassword" size="80" />
+							</p>
+							<p class="invalidpass"></p>
+							<p>
+								<label>Country</label><br /> <input type="text" id="country"
+									size="80" />
+							</p>
+							<p>
+								<label>City</label><br /> <input type="text" id="city"
+									size="80" />
+							</p> <!--name change-->
+							<p>
+								<label>About me</label><br />
+								<textarea id="aboutme" rows="6" cols="73"></textarea>
+							</p>
+							<p>
+								<label>Profile picture: </label> <input type="file"
+									accept="image/*" title="&nbsp;" />
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div>
+								<input type="submit"> <input type="reset"
+									value="Clear Form">
+							</div>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+	<!--bottom footer -->
+	<footer>
+		<p>
+			<a href="#">Home</a> | <a href="#">About us</a> | <a href="#">Contact</a>
+		</p>
+		<p>
+			<em>Copyright &copy; MyDiscussionForum</em>
+		</p>
+	</footer>
+</body>
+</html>
