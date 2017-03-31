@@ -49,10 +49,15 @@ footer{
 	 box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 
-  a:link  {
+ a:link  {
 	text-decoration:none; 
 	color: white;
-  }
+ }
+  
+.create:link {
+	 text-decoration:none;
+	 color:#6587b9;
+}
 
  body {
 	background-color:#efefef;
@@ -85,6 +90,8 @@ article#leftside {
 	background-color: #187ab9;
 	margin-left: 1em;
 }
+#searchbutton {
+}
 
 article#rightside {
  float:right;
@@ -93,12 +100,13 @@ article#rightside {
 }
 
 article#leftside a:hover {
-	text-decoration:underline;   
+	text-decoration:underline;
+		color:black;
   }
   
-  article#rightside a:hover {
+ article#rightside a:hover {
 	text-decoration:underline;   
-  }
+ }
  .invalidpass, .invaliduser {
 	color:red;
 	font-size:12px;
@@ -110,8 +118,12 @@ article#leftside a:hover {
 	word-wrap: break-word;
     margin: 1em 1em 1em 1em;
     border-bottom: 1pt dashed #efefef;
-  }
-  
+}
+
+.posts a:link {
+	 text-decoration:none;
+	 color: #6587b9;
+}
 figure {
    float: left;
    position: relative;
@@ -126,14 +138,27 @@ figcaption {
    position: absolute;
    top: 120px;
 }
-  
-  
+
+
+#im {
+	width: 75px;
+	height: 75px;
+}
+
+#recimage {
+	float: right;
+}
+
  .recposts {
 	word-wrap: break-word;
     margin: 1em 1em 1em 1em;
     border-bottom: 1pt dotted black;
  }
  
+ .recposts  a:link  {
+	text-decoration:none; 
+	color: #6587b9;
+ }
  #userLogin {
 	margin-left:1em;
 	margin-right:1em; 

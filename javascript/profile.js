@@ -16,3 +16,4 @@ function comment() {
 	}
 	return true;
 }
+

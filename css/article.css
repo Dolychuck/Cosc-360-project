@@ -145,13 +145,31 @@ img {
 	width: 100%;
 	height: 400px;
 }
-  
+ 
+#im {
+	width: 75px;
+	height: 75px;
+}
+
+#recimage {
+	float: right;
+}
  .recposts {
 	word-wrap: break-word;
     margin: 1em 1em 1em 1em;
     border-bottom: 1pt dotted black;
  }
  
+ .recposts :link  {
+	text-decoration:none; 
+	color: #6587b9;
+ }
+
+.commentsection:link {
+	text-decoration:none;
+	color: #6587b9;
+}
+
  #userLogin {
 	margin-left:1em;
 	margin-right:1em; 

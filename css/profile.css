@@ -31,6 +31,7 @@ footer{
  header h1 {
 	text-align:center;
  }
+
  .buttons {
 		padding: .5em .5em .5em .5em;
  }
@@ -81,7 +82,7 @@ article#leftside {
 	word-wrap: break-word;
     margin: 1em 1em 1em 1em;
 }
-  
+
 #profilepic {
     height: auto; 
     width: auto; 

@@ -16,3 +16,8 @@ function userpass() {
 	}
 	return true;
 }
+
+function empty() {
+	document.getElementById('user').value = "";
+	document.getElementById('pass').value = "";
+}
