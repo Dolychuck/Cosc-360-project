@@ -104,12 +104,11 @@ CREATE TABLE `comment` (
   `comment` VARCHAR(300) NULL,
   `date` DATETIME NOT NULL,
   INDEX `fk_Comment_Userpost1_idx` (`PostID` ASC, `username` ASC),
-  PRIMARY KEY (`PostID`, `username`, `date`),
+  PRIMARY KEY (`PostID`, `date`),
   CONSTRAINT `fk_Comment_Userpost1`
-    FOREIGN KEY (`PostID` , `username`)
-    REFERENCES `userpost` (`PostID` , `username`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    FOREIGN KEY (`PostID`)
+    REFERENCES `userpost` (`PostID`)
+    )
 ENGINE = InnoDB;
 
 

@@ -6,15 +6,15 @@
 		$lastname = $_POST["lastname"];
 		$passwordOut = md5($_POST["password"]);
 		$aboutme = $_POST["aboutme"];
-		
+
 		if(!isset($passwordOut)) {
-			echo "wtf";
+			 
 		}
-		
+
 		$host = "localhost";
-		$database = "project";
-		$user = "dustin";
-		$password = "pass";
+		$database = "db_42686155";
+		$user = "42686155";
+		$password = "42686155";
 
 		$connection = mysqli_connect($host, $user, $password, $database);
 		$error = mysqli_connect_error();
@@ -29,14 +29,14 @@
 				echo "<p>An account for the user ".$username." has been created</p>";
 				$sql3 = "SELECT userID FROM users WHERE username = '".$username."'";
 				$result = mysqli_query($connection, $sql3);
-				
+
 				while ($row = mysqli_fetch_assoc($result)) {
 					$userID = $row['userID'];
 				}
-					
-				
-				
-				
+
+
+
+
 				$target_dir = "uploads/";
 				$target_file = $target_dir.basename($_FILES["userImage"]["name"]);
 				$uploadOk = 1;
@@ -72,23 +72,23 @@
 							echo "Sorry, your file was not uploaded.";
 						} else {
 							echo "The file ". basename( $_FILES["userImage"]["name"]). " has been uploaded.";
-						} 
-					
+						}
+
 						$target_file = $target_dir.basename($_FILES["userImage"]["name"]);
 						$imagedata = file_get_contents($_FILES['userImage']['tmp_name']);
 						$sql = "UPDATE userImages SET contentType= ?, image= ? WHERE userID= ?;";
-						$stmt = mysqli_stmt_init($connection); 
+						$stmt = mysqli_stmt_init($connection);
 						mysqli_stmt_prepare($stmt, $sql);
 						$null = NULL;
 						mysqli_stmt_bind_param($stmt, "sbi", $imageFileType, $null, $userID);
 						mysqli_stmt_send_long_data($stmt, 1, $imagedata);
 						$result = mysqli_stmt_execute($stmt) or die(mysqli_stmt_error($stmt));
-						mysqli_stmt_close($stmt);					
+						mysqli_stmt_close($stmt);
 						$_SESSION["username"] = $username;
 					}
 					header("Location: profile.php");
-			} 
-			
+			}
+
 		mysqli_close($connection);
 	}
 ?>

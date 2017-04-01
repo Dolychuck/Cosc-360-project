@@ -6,8 +6,8 @@ footer{
     background-color: #6587b9;
 	margin:  1em 13em 1em 13em;
   }
-  
-  
+
+
  header  {
 	top:0;
 	color: white;
@@ -16,7 +16,7 @@ footer{
 	position:fixed;
 	width: 100%;
  }
- 
+
  #profile {
 	float:right;
 	margin-right:2em;
@@ -24,9 +24,9 @@ footer{
  }
 
  #profile:hover {
-	box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1); 
+	box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
  }
- 
+
  #title {
 	margin-right: 30rem;
 	margin-left: 10rem;
@@ -37,23 +37,23 @@ footer{
      list-style: none;
      display: inline;
  }
-  
+
  header h1 {
 	text-align:center;
  }
  .buttons {
 		padding: .5em .5em .5em .5em;
  }
- 
+
 .buttons:hover {
 	 box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 
  a:link  {
-	text-decoration:none; 
+	text-decoration:none;
 	color: white;
  }
-  
+
 .create:link {
 	 text-decoration:none;
 	 color:#6587b9;
@@ -66,7 +66,7 @@ footer{
 article {
      background-color: white;
  }
- 
+
 div#main {
 	overflow:hidden;
     height: 100%;
@@ -74,23 +74,15 @@ div#main {
 	margin:  5em 13em 1em 13em;
 	min-height: 30em
 }
- 
+
 article#leftside {
    margin: 0em 5em 2em 0em;
    height: 100%;
    overflow: hidden;
 }
-#search {
-	margin:  1em .25em .25em .25em;
-	padding: .25em .25em .25em .25em;
-}
 
 .loginbutton {
-	color:white;
-	background-color: #187ab9;
 	margin-left: 1em;
-}
-#searchbutton {
 }
 
 article#rightside {
@@ -103,9 +95,15 @@ article#leftside a:hover {
 	text-decoration:underline;
 		color:black;
   }
-  
+
  article#rightside a:hover {
-	text-decoration:underline;   
+	text-decoration:underline;
+ }
+
+ p#results {
+     color:#6587b9;
+     margin:1em;
+     font-size: 1.5em;
  }
  .invalidpass, .invaliduser {
 	color:red;
@@ -154,21 +152,28 @@ figcaption {
     margin: 1em 1em 1em 1em;
     border-bottom: 1pt dotted black;
  }
- 
+
  .recposts  a:link  {
-	text-decoration:none; 
+	text-decoration:none;
 	color: #6587b9;
+ }
+
+ #searchbar {
+   margin-bottom:1em;
+   margin-top:1em;
+   margin-left:2em;
+ 	 margin-right:1em;
  }
  #userLogin {
 	margin-left:1em;
-	margin-right:1em; 
+	margin-right:1em;
  }
 #recommended {
 	background-color:#efefef;
 	min-height:21em;
 	margin-left:1em;
 	margin-right:1em;
-}	
+}
 #recommended h1 {
 	background: #187ab9;
 	color: white;

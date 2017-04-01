@@ -6,8 +6,8 @@ footer{
     background-color: #6587b9;
 	margin:  1em 13em 1em 13em;
   }
-  
-  
+
+
   header  {
 	top:0;
 	color: white;
@@ -16,7 +16,7 @@ footer{
 	position:fixed;
 	width: 100%;
  }
-  
+
  #profile {
 	float:right;
 	margin-right:2em;
@@ -24,34 +24,34 @@ footer{
  }
 
  #profile:hover {
-	box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1); 
+	box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
  }
- 
+
  #title {
 	margin-right: 32rem;
 	margin-left: 10rem;
 	font-size:150%;
 	float:right;
  }
- 
+
   nav li{
      list-style: none;
      display: inline;
  }
-  
+
  header h1 {
 	text-align:center;
  }
  .buttons {
 		padding: .5em .5em .5em .5em;
  }
- 
+
 .buttons:hover {
 	 box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 
  a:link  {
-	text-decoration:none; 
+	text-decoration:none;
 	color: white;
 }
 
@@ -62,7 +62,7 @@ footer{
 article {
      background-color: white;
  }
- 
+
 div#main {
 	overflow:hidden;
     height: 100%;
@@ -90,11 +90,13 @@ article#leftside {
 #comments {
 	margin: 1em 1em 0em 1em;
 }
-
+.logorsignup {
+   margin-left: 1em;
+}
 .comment {
 	border-top: 1pt solid #efefef;
 	border-bottom: 1pt solid #efefef;
-	
+
 }
 
 span {
@@ -102,7 +104,7 @@ span {
 	color:#6587b9;
 	font-style: italic;
 }
-	
+
 #search {
 	margin:  1em .25em .25em .25em;
 	padding: .25em .25em .25em .25em;
@@ -115,20 +117,20 @@ article#rightside {
 }
 
 article#leftside a:hover {
-	text-decoration:underline;   
+	text-decoration:underline;
   }
-  
+
 article#rightside a:hover {
-	text-decoration:underline;   
+	text-decoration:underline;
 }
-  
+
 .post {
 	overflow: auto;
 	word-wrap: break-word;
     margin: 1em 1em 1em 1em;
     border-bottom: 1pt solid #6587b9;
 }
- 
+
 #articleHead {
 	/*text-align: center;
 	background-color: #efefef;*/
@@ -136,7 +138,7 @@ article#rightside a:hover {
 }
 
 #author {
-	border-bottom: 1pt dashed #efefef; 
+	border-bottom: 1pt dashed #efefef;
 }
 
 img {
@@ -145,7 +147,7 @@ img {
 	width: 100%;
 	height: 400px;
 }
- 
+
 #im {
 	width: 75px;
 	height: 75px;
@@ -159,27 +161,28 @@ img {
     margin: 1em 1em 1em 1em;
     border-bottom: 1pt dotted black;
  }
- 
+
  .recposts :link  {
-	text-decoration:none; 
+	text-decoration:none;
 	color: #6587b9;
  }
 
-.commentsection:link {
+.commentsection a:link {
 	text-decoration:none;
 	color: #6587b9;
 }
 
  #userLogin {
 	margin-left:1em;
-	margin-right:1em; 
+	margin-right:1em;
  }
+
 #recommended {
 	background-color:#efefef;
 	min-height:21em;
 	margin-left:1em;
 	margin-right:1em;
-}	
+}
 #recommended h1 {
 	background: #6587b9;
 	color: white;

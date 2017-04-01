@@ -11,7 +11,7 @@
 
 			$connection = mysqli_connect($host, $user, $password, $database);
 			$error = mysqli_connect_error();
-	
+
 			if($error != null) {
 				$output = "<p>Unable to connect to database!</p>";
 				exit($output);
@@ -24,13 +24,13 @@
 						mysqli_stmt_execute($statement);
 						$sql3 = "SELECT postID FROM userpost WHERE username = '".$username."'";
 						$result = mysqli_query($connection, $sql3);
-						
+
 						while ($row = mysqli_fetch_assoc($result)) {
 							$postID = $row['postID'];
 						}
 						mysqli_free_result($result);
 					}
-					
+
 					$target_dir = "uploads/";
 					$target_file = $target_dir.basename($_FILES["userImage"]["name"]);
 					$uploadOk = 1;
@@ -58,7 +58,6 @@
 					}
 					// Allow certain file formats
 					if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-						echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 						$uploadOk = 0;
 					}
 					// Check if $uploadOk is set to 0 by an error
@@ -67,23 +66,25 @@
 					// if everything is ok, try to upload file
 					} else {
 						//if (move_uploaded_file($_FILES["userImage"]["tmp_name"], $target_file)) {
-						header("Location: ../php/main.php");
+						mysqli_close($connection);
+						header("Location: main.php");
 					} //else {
 						//echo "Sorry, there was an error uploading your file.";
 					//}
-				
+
 					$target_file = $target_dir.basename($_FILES["userImage"]["name"]);
 					$imagedata = file_get_contents($_FILES['userImage']['tmp_name']);
 					$sql = "INSERT INTO postImages (postID,username, contentType,image) VALUES(?,?,?,?)";
-					$stmt = mysqli_stmt_init($connection); 
+					$stmt = mysqli_stmt_init($connection);
 					mysqli_stmt_prepare($stmt, $sql);
 					$null = NULL;
 					mysqli_stmt_bind_param($stmt, "issb", $postID, $username, $imageFileType, $null);
 					mysqli_stmt_send_long_data($stmt, 3, $imagedata);
 					$result = mysqli_stmt_execute($stmt) or die(mysqli_stmt_error($stmt));
-					mysqli_stmt_close($stmt); 
+					mysqli_stmt_close($stmt);
 				}
 				mysqli_close($connection);
+				header("Location: main.php");
 			}
 		} else {
 			header("Location: main.php");
