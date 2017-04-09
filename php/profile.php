@@ -136,7 +136,7 @@
                            </p>
                            <p class="invaliduserpost"></p>
                            <p>
-                              <label>Picture</label> <input type="file" name="userImage">
+                              <label>Picture</label> <input type="file" name="userImage" id="userImage">
                            </p>
                         </td>
                      </tr>
@@ -151,7 +151,31 @@
                   </table>
                </fieldset>
             </form>
-         </section>
+         <?php
+            $host = "localhost";
+            $database = "db_42686155";
+            $user = "42686155";
+            $password = "42686155";
+
+            $connection = mysqli_connect($host, $user, $password, $database);
+            $error = mysqli_connect_error();
+
+            if($error != null) {
+              $output = "<p>Unable to connect to database!</p>";
+              exit($output);
+            } else {
+              $sql = "SELECT * FROM comment WHERE username='".$username."'";
+              $result = mysqli_query($connection, $sql);
+              echo '<section id="comments"><table><tr><th colspan=3><h1>Comment history<h1></th></tr><tr><th>PostId</th><th>Comment</th><th>Date</th></tr>';
+              while ($row = mysqli_fetch_assoc($result)) {
+                  echo '<tr><td>'.$row["PostID"].'</td><td>'.$row["comment"].'</td><td>'.$row["date"].'</td></tr>';
+
+              }
+              echo '</table></section>';
+              mysqli_free_result($result);
+              mysqli_stmt_close($statement);
+            }
+         ?>
       </article>
       </div>
       <!--bottom footer -->

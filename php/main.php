@@ -33,8 +33,8 @@
       <div id="main">
          <article id="rightside">
            <div id="searchbar">
-             <form method="POST" action="main.php">
-               <input type="text" name="search" placeholder="Search"/>
+             <form id="search" method="GET" action="">
+               <input type="text" name="search" id="textsearch" placeholder="Search"/>
                <input type="submit" value="Search"/>
              </form>
            </div>
@@ -115,23 +115,6 @@
               $output = "<p>Unable to connect to database!</p>";
               exit($output);
               } else {
-                 if($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $search = $_POST["search"];
-                 }
-
-                 if(isset($search)) {
-                   echo '<p id="results">Search results:</p>';
-                   $sql = "SELECT userpost.username,post,headline,image,contentType,userpost.PostID FROM userpost, postImages WHERE post LIKE '%".$search."%' AND userpost.PostID = postImages.PostID LIMIT 10;";
-                   $results = mysqli_query($connection, $sql);
-                   while ($row = mysqli_fetch_assoc($results)) {
-                     echo "<section class=\"posts\">";
-                     echo '<figure><img src="data:image/'.$row["contentType"].';base64,'.base64_encode($row["image"]).'"/></figure>';
-                     echo "<a href=\"article.php?a=".$row["PostID"]."\">".$row["headline"]."</a>";
-                     echo "<p>Author: ".$row["username"]."</p>";
-                     echo "<P>".$row["post"]."</p>";
-                     echo "</section>";
-                   }
-                 } else {
                    if(!isset($_SESSION["category"])) {
                    	//travel is default
                    	$_SESSION["category"] = "travel";
@@ -139,7 +122,7 @@
                     //shows which articles to display
                     $category = $_SESSION["category"];
 
-                    $sql = "SELECT userpost.username,post,headline,image,contentType,userpost.PostID FROM userpost, postImages WHERE theme='".$category. "' AND userpost.PostID = postImages.PostID;";
+                    $sql = "SELECT userpost.username,post,headline,image,contentType,userpost.PostID FROM userpost, postImages WHERE theme='".$category. "' AND userpost.PostID = postImages.PostID ORDER BY postID DESC;";
                    	$results = mysqli_query($connection, $sql);
                    	while ($row = mysqli_fetch_assoc($results)) {
                    		echo "<section class=\"posts\">";
@@ -150,7 +133,6 @@
                    		echo "</section>";
                    	}
                    }
-               }
                mysqli_close($connection);
                ?>
          </article>
@@ -164,5 +146,7 @@
             <em>Copyright &copy; MyDiscussionForum</em>
          </p>
       </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="../javascript/main.js"></script>
    </body>
 </html>

@@ -37,6 +37,11 @@ footer{
      list-style: none;
      display: inline;
  }
+p#invalid {
+ 	color:red;
+ 	font-size:12px;
+ 	font-style: italic;
+ }
 
  header h1 {
 	text-align:center;

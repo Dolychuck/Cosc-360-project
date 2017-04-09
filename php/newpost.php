@@ -58,6 +58,7 @@
 					}
 					// Allow certain file formats
 					if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+						echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 						$uploadOk = 0;
 					}
 					// Check if $uploadOk is set to 0 by an error
@@ -66,8 +67,7 @@
 					// if everything is ok, try to upload file
 					} else {
 						//if (move_uploaded_file($_FILES["userImage"]["tmp_name"], $target_file)) {
-						mysqli_close($connection);
-						header("Location: main.php");
+						header("Location: ../php/main.php");
 					} //else {
 						//echo "Sorry, there was an error uploading your file.";
 					//}
@@ -84,7 +84,6 @@
 					mysqli_stmt_close($stmt);
 				}
 				mysqli_close($connection);
-				header("Location: main.php");
 			}
 		} else {
 			header("Location: main.php");

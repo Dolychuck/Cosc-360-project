@@ -65,8 +65,8 @@ article {
 
 div#main {
 	overflow:hidden;
-    height: 100%;
-	background-color: white;
+  height: 100%;
+  background-color: white;
 	margin:  5em 13em 1em 13em;
 	min-height: 30em
 }
@@ -81,6 +81,9 @@ article#rightside {
 	padding: .25em .25em .25em .25em;
 }
 
+#comments {
+   margin-bottom: 2em;
+}
 article#leftside {
   float:left;
   width: 25em;
@@ -90,7 +93,8 @@ article#leftside {
 .posts {
 	overflow: auto;
 	word-wrap: break-word;
-    margin: 1em 1em 1em 1em;
+  margin: 1em 1em 1em 1em;
+  height: 100%;
 }
 
 #profilepic {

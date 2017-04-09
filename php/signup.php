@@ -71,7 +71,7 @@
                            <textarea id="aboutme" name="aboutme" rows="6" cols="73"></textarea>
                         </p>
                         <p>
-                           <label>Profile picture: </label> <input type="file" name="userImage"><br>
+                           <label>Profile picture: </label> <input type="file" name="userImage" id="userImage"><br>
                         </p>
                      </td>
                   </tr>

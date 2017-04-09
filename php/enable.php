@@ -28,9 +28,19 @@
                mysqli_query($connection,$sql);
              }
            }
+           $sql = "SELECT * FROM users WHERE firstname='".$username."'";
+           echo '<tr><th>Username</th><th>Name</th><th>Email</th><th>Status</th><th>Enable/Disable</th></tr>';
+           $result = mysqli_query($connection,$sql);
+           while($row = mysqli_fetch_assoc($result)) {
+               if(strcmp($row["status"],"enabled") == 0) {
+                  $choice = "disable";
+               } else {
+                  $choice = "enable";
+               }
+               echo '<tr><td>'.$row["username"].'</td><td>'.$row["firstName"].'</td><td>'.$row["email"].'</td><td>'.$row["status"].'</td><td><button onclick="enable(this.value)" value="'.$row["username"].'">'.$choice.'</button></td></tr>';
+           }
         }
         mysqli_close($connection);
-        header("Location: admin.php");
     } else {
       header("Location: main.php");
     }

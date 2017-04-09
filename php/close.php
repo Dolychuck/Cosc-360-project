@@ -16,8 +16,14 @@
 
            $sql = "DELETE FROM userpost WHERE PostID=".$postid."";
            mysqli_query($connection,$sql);
+           session_start();
+           $sql = "SELECT * FROM users,userpost WHERE users.username = userpost.username AND theme='".$_SESSION["theme"]."'";
+           echo '<tr><th>Username</th><th>Name</th><th>Headline</th><th>Edit post</th><th>Close Post</th></tr>';
+           $result = mysqli_query($connection,$sql);
+           while($row = mysqli_fetch_assoc($result)) {
+             echo '<tr><td>'.$row["username"].'</td><td>'.$row["firstName"].'</td><td>'.$row["headline"].'</td><td><a href="editpost.php?b='.$row["PostID"].'">edit</a></td><td><button onclick="deletePost(this.value)" value="'.$row["PostID"].'">close</a></td></tr>';
+           }
            mysqli_close($connection);
-           header("Location: admin.php");
       }
     } else {
         header("Location: main.php");

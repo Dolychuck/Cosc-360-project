@@ -129,9 +129,9 @@
             </div>
             <?php
                if(isset($_SESSION["username"])) {
-               	echo '<form method="POST" action="comment.php">';
+               	echo '<form id= "input" method="POST" action="">';
                	echo '<fieldset><legend>Post a new comment</legend>';
-               	echo '<p><textarea name="commentpost" rows="10" cols="95"></textarea>';
+               	echo '<p><textarea id="commentpost" name="commentpost" rows="10" cols="95"></textarea>';
                	echo '</p><p><input type="submit" value="Post"></p></fieldset></form>';
                } else {
                	echo '<div class="logorsignup"><p><a href="main.php"><span class="commentsection">Log in</span></a> or <a href="signup.php"><span class="commentsection">Sign up</span></a> to leave a comment</p><div>';
@@ -148,5 +148,7 @@
             <em>Copyright &copy; MyDiscussionForum</em>
          </p>
       </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="../javascript/article.js"></script>
    </body>
 </html>

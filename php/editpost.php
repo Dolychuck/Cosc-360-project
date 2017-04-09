@@ -25,6 +25,8 @@
       <?php
       if($_SERVER["REQUEST_METHOD"] == "GET") {
           $id = $_GET["b"];
+          session_start();
+          $_SESSION["postID"] = $id;
           $host = "localhost";
           $database = "db_42686155";
           $user = "42686155";
@@ -35,10 +37,11 @@
             $output = "<p>Unable to connect to database!</p>";
             exit($output);
           } else {
-              $sql = "SELECT * FROM userpost WHERE PostID=".$postid.";";
+              $sql = "SELECT * FROM userpost WHERE PostID=".$id.";";
               $result = mysqli_query($connection,$sql);
               if($row = mysqli_fetch_assoc($result)) {
-                $theme = $row["headline"];
+                $theme = $row["theme"];
+                $headline = $row["headline"];
                 $post = $row["post"];
               }
           }
@@ -46,7 +49,7 @@
         }
       ?>
       <div id="main">
-        <form method="POST" action="newpost.php" onsubmit="return comment();">
+        <form method="POST" action="changepost.php" onsubmit="return comment();">
            <fieldset>
               <legend>Edit Post</legend>
               <table>
@@ -55,6 +58,7 @@
                        <p>
                           <label>Theme</label><br/>
                           <select name="theme" id="theme" name="theme">
+                             <option selected="<?php echo $theme;?>"><?php echo $theme;?></option>
                              <option value="travel">Travel</option>
                              <option value="news">News</option>
                              <option value="sports">Sports</option>
@@ -67,7 +71,7 @@
                        <p class="invalidtheme"></p>
                        <p>
                           <label>Post</label><br />
-                          <textarea id="userpost" name="post" rows="15" cols="53" placeholder="<?php echo $headline;?>"></textarea>
+                          <textarea id="userpost" name="post" rows="15" cols="53"><?php echo $post;?></textarea>
                        </p>
                        <p class="invaliduserpost"></p>
                     </td>
